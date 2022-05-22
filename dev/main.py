@@ -83,7 +83,7 @@ class Main():
 			time.sleep(signal_entry.pulselength)
 			self.vjoy.SetButton(signal_entry.joystick, 0, signal_entry.joystick_input)
 		elif signal_entry.behavior == "axis":
-			pass
+			self.vjoy.SetButton(signal_entry.joystick, signal.value, signal_entry.joystick_input)
 		elif signal_entry.behavior == "knob":
 			value = signal.value
 			if value >= 65: value = value - 64 	#(1 to 7)
